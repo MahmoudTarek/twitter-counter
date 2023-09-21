@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TwitterCounterView" customModule="TwitterCounter">
+            <connections>
+                <outlet property="charactersRemainingView" destination="AVR-18-jjk" id="A1N-3U-s1E"/>
+                <outlet property="charactersTypedView" destination="QLl-HT-O78" id="gM3-QK-XJk"/>
+                <outlet property="clearTextBtn" destination="6d0-9Y-czP" id="C7s-Ba-4iu"/>
+                <outlet property="copyTextBtn" destination="8o6-H0-Mr1" id="0di-lK-OBn"/>
+                <outlet property="postTweetBtn" destination="dtp-sR-m2H" id="tca-Hc-qsa"/>
+                <outlet property="tweetTextView" destination="yKI-p2-euJ" id="ZQq-oo-WCp"/>
+                <outlet property="twitterImageView" destination="Gd8-M3-v4Q" id="Fgt-yo-Njd"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Gd8-M3-v4Q">
+                    <rect key="frame" x="166.66666666666666" y="83" width="60" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="rNH-Fg-P6w"/>
+                        <constraint firstAttribute="height" constant="60" id="sz1-r3-Gb0"/>
+                    </constraints>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="kng-as-dc1">
+                    <rect key="frame" x="16" y="159" width="361" height="108"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QLl-HT-O78" customClass="CharacterCountView" customModule="Twitter_Counter_Sample_App" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="170.66666666666666" height="108"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AVR-18-jjk" customClass="CharacterCountView" customModule="Twitter_Counter_Sample_App" customModuleProvider="target">
+                            <rect key="frame" x="190.66666666666663" y="0.0" width="170.33333333333337" height="108"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="108" id="ozz-6H-rci"/>
+                    </constraints>
+                </stackView>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yKI-p2-euJ">
+                    <rect key="frame" x="16" y="291" width="361" height="150"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="150" id="OqZ-6R-MxE"/>
+                    </constraints>
+                    <color key="textColor" systemColor="labelColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8o6-H0-Mr1">
+                    <rect key="frame" x="16" y="465" width="92.666666666666671" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="nFf-QB-mo0"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Copy Text">
+                        <backgroundConfiguration key="background">
+                            <color key="backgroundColor" red="0.0" green="0.66274509803921566" blue="0.4392156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                        </backgroundConfiguration>
+                        <fontDescription key="titleFontDescription" type="boldSystem" pointSize="14"/>
+                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="didTapCopyText:" destination="-1" eventType="touchUpInside" id="cgx-Rm-UX4"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6d0-9Y-czP">
+                    <rect key="frame" x="283.66666666666669" y="465" width="93.333333333333314" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="c9c-gl-zBH"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Clear Text">
+                        <backgroundConfiguration key="background">
+                            <color key="backgroundColor" red="0.86274509803921573" green="0.0039215686274509803" blue="0.14509803921568626" alpha="1" colorSpace="calibratedRGB"/>
+                        </backgroundConfiguration>
+                        <fontDescription key="titleFontDescription" type="boldSystem" pointSize="14"/>
+                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="didTapClearText:" destination="-1" eventType="touchUpInside" id="yCQ-BJ-UyG"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dtp-sR-m2H">
+                    <rect key="frame" x="16" y="529" width="361" height="56"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="56" id="PZ2-rB-igf"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Post tweet">
+                        <backgroundConfiguration key="background">
+                            <color key="backgroundColor" red="0.011764705882352941" green="0.66274509803921566" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
+                        </backgroundConfiguration>
+                        <fontDescription key="titleFontDescription" type="boldSystem" pointSize="18"/>
+                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="didTapPostTweet:" destination="-1" eventType="touchUpInside" id="x2P-je-DLZ"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="8o6-H0-Mr1" firstAttribute="top" secondItem="yKI-p2-euJ" secondAttribute="bottom" constant="24" id="0oB-D0-Uve"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="kng-as-dc1" secondAttribute="trailing" constant="16" id="8aI-kX-qtU"/>
+                <constraint firstItem="kng-as-dc1" firstAttribute="top" secondItem="Gd8-M3-v4Q" secondAttribute="bottom" constant="16" id="8bu-C8-16N"/>
+                <constraint firstItem="Gd8-M3-v4Q" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="AZM-CV-U4K"/>
+                <constraint firstItem="dtp-sR-m2H" firstAttribute="top" secondItem="6d0-9Y-czP" secondAttribute="bottom" constant="24" id="BvX-PA-QDE"/>
+                <constraint firstItem="6d0-9Y-czP" firstAttribute="top" secondItem="8o6-H0-Mr1" secondAttribute="top" id="I9b-mH-NYt"/>
+                <constraint firstItem="kng-as-dc1" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="Pfb-Jr-AeJ"/>
+                <constraint firstItem="yKI-p2-euJ" firstAttribute="top" secondItem="kng-as-dc1" secondAttribute="bottom" constant="24" id="WPj-dY-UBM"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="yKI-p2-euJ" secondAttribute="trailing" constant="16" id="bYc-3E-ooZ"/>
+                <constraint firstItem="dtp-sR-m2H" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="eVZ-gy-S5n"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="dtp-sR-m2H" secondAttribute="bottom" constant="24" id="oqp-fW-4Rp"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="dtp-sR-m2H" secondAttribute="trailing" constant="16" id="stU-3s-VBf"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="6d0-9Y-czP" secondAttribute="trailing" constant="16" id="tZD-PX-CKn"/>
+                <constraint firstItem="yKI-p2-euJ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="xQc-ww-4SZ"/>
+                <constraint firstItem="8o6-H0-Mr1" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="xQy-Al-OAv"/>
+                <constraint firstItem="Gd8-M3-v4Q" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="24" id="ySJ-wo-RXL"/>
+            </constraints>
+            <point key="canvasLocation" x="138.1679389312977" y="20.422535211267608"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
