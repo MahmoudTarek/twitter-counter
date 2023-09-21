@@ -13,6 +13,7 @@
 		BB5A58792ABC2DEE005EB28D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB5A58772ABC2DEE005EB28D /* Main.storyboard */; };
 		BB5A587B2ABC2DEF005EB28D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB5A587A2ABC2DEF005EB28D /* Assets.xcassets */; };
 		BB5A587E2ABC2DEF005EB28D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB5A587C2ABC2DEF005EB28D /* LaunchScreen.storyboard */; };
+		BB5A588C2ABC3007005EB28D /* TwitterCounter in Frameworks */ = {isa = PBXBuildFile; productRef = BB5A588B2ABC3007005EB28D /* TwitterCounter */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB5A588C2ABC3007005EB28D /* TwitterCounter in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +85,9 @@
 			dependencies = (
 			);
 			name = Example;
+			packageProductDependencies = (
+				BB5A588B2ABC3007005EB28D /* TwitterCounter */,
+			);
 			productName = Example;
 			productReference = BB5A586E2ABC2DEE005EB28D /* Example.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +116,9 @@
 				Base,
 			);
 			mainGroup = BB5A58652ABC2DEE005EB28D;
+			packageReferences = (
+				BB5A588A2ABC3007005EB28D /* XCRemoteSwiftPackageReference "twitter-counter" */,
+			);
 			productRefGroup = BB5A586F2ABC2DEE005EB28D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -358,6 +366,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BB5A588A2ABC3007005EB28D /* XCRemoteSwiftPackageReference "twitter-counter" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "../";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BB5A588B2ABC3007005EB28D /* TwitterCounter */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BB5A588A2ABC3007005EB28D /* XCRemoteSwiftPackageReference "twitter-counter" */;
+			productName = TwitterCounter;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BB5A58662ABC2DEE005EB28D /* Project object */;
 }
