@@ -14,7 +14,10 @@ let package = Package(
         .target(
             name: "TwitterCounter",
             dependencies: [],
-            path: "Sources"),
+            path: "Sources",
+            resources: [
+                .process("Resources")
+            ]),
         .testTarget(
             name: "TwitterCounterTests",
             dependencies: ["TwitterCounter"]),

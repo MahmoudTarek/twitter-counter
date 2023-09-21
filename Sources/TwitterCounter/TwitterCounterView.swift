@@ -10,7 +10,6 @@ import MobileCoreServices
 
 public class TwitterCounterView: UIView {
     
-    @IBOutlet private weak var twitterImageView: UIImageView!
     @IBOutlet private weak var charactersTypedView: CharacterCountView!
     @IBOutlet private weak var charactersRemainingView: CharacterCountView!
     @IBOutlet private weak var tweetTextView: UITextView!
@@ -45,7 +44,6 @@ public class TwitterCounterView: UIView {
     }
     
     private func initUi() {
-        twitterImageView.image = UIImage(named: "twitter_logo")
         
         charactersTypedView.setTitle("Characters Typed")
         charactersTypedView.setContent(controller.getCharactersTypedContent())
@@ -67,7 +65,10 @@ public class TwitterCounterView: UIView {
     @IBAction
     func didTapClearText(_ sender: UIButton) {
         tweetTextView.text = nil
+        endEditing(true)
         updateBtns(false)
+        controller.updateCharactersCount("")
+        updateCharacterCounts()
         textViewDidEndEditing(tweetTextView)
     }
     
@@ -112,5 +113,10 @@ extension TwitterCounterView: UITextViewDelegate {
         controller.updateCharactersCount(textView.text)
         updateBtns(controller.shouldEnableBtns())
         updateCharacterCounts()
+    }
+    
+    public func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        let newText = (textView.text as NSString).replacingCharacters(in: range, with: text)
+        return newText.count <= 280
     }
 }

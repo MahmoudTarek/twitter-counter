@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TwitterCounterView">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TwitterCounterView" customModule="TwitterCounter">
             <connections>
                 <outlet property="charactersRemainingView" destination="AVR-18-jjk" id="A1N-3U-s1E"/>
                 <outlet property="charactersTypedView" destination="QLl-HT-O78" id="gM3-QK-XJk"/>
@@ -17,7 +17,6 @@
                 <outlet property="copyTextBtn" destination="8o6-H0-Mr1" id="0di-lK-OBn"/>
                 <outlet property="postTweetBtn" destination="dtp-sR-m2H" id="tca-Hc-qsa"/>
                 <outlet property="tweetTextView" destination="yKI-p2-euJ" id="ZQq-oo-WCp"/>
-                <outlet property="twitterImageView" destination="Gd8-M3-v4Q" id="Fgt-yo-Njd"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -25,7 +24,7 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Gd8-M3-v4Q">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Images/twitter_logo" translatesAutoresizingMaskIntoConstraints="NO" id="Gd8-M3-v4Q">
                     <rect key="frame" x="166.66666666666666" y="83" width="60" height="60"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="60" id="rNH-Fg-P6w"/>
@@ -35,11 +34,11 @@
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="kng-as-dc1">
                     <rect key="frame" x="16" y="159" width="361" height="108"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QLl-HT-O78" customClass="CharacterCountView" customModule="Twitter_Counter_Sample_App" customModuleProvider="target">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QLl-HT-O78" customClass="CharacterCountView" customModule="TwitterCounter">
                             <rect key="frame" x="0.0" y="0.0" width="170.66666666666666" height="108"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AVR-18-jjk" customClass="CharacterCountView" customModule="Twitter_Counter_Sample_App" customModuleProvider="target">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AVR-18-jjk" customClass="CharacterCountView" customModule="TwitterCounter">
                             <rect key="frame" x="190.66666666666663" y="0.0" width="170.33333333333337" height="108"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         </view>
@@ -134,6 +133,7 @@
         </view>
     </objects>
     <resources>
+        <image name="Images/twitter_logo" width="60" height="60"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

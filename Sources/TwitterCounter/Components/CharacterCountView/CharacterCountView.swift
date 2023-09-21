@@ -26,7 +26,7 @@ class CharacterCountView: UIView {
     }
     
     private func commonInit() {
-        let nib = UINib(nibName: "CharacterCountView", bundle: nil)
+        let nib = UINib(nibName: "CharacterCountView", bundle: Bundle.module)
         
         if let view = nib.instantiate(withOwner: self, options: nil).first as? UIView {
             view.frame = bounds
