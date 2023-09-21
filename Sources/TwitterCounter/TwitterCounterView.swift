@@ -33,7 +33,7 @@ public class TwitterCounterView: UIView {
     }
     
     private func commonInit() {
-        let nib = UINib(nibName: "TwitterCounter", bundle: Bundle.module)
+        let nib = UINib(nibName: "TwitterCounterView", bundle: Bundle.module)
         
         if let view = nib.instantiate(withOwner: self, options: nil).first as? UIView {
             view.frame = bounds

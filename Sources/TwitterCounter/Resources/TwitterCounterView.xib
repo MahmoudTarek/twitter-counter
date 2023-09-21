@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TwitterCounterView" customModule="TwitterCounter">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TwitterCounterView" customModuleProvider="target">
             <connections>
                 <outlet property="charactersRemainingView" destination="AVR-18-jjk" id="A1N-3U-s1E"/>
                 <outlet property="charactersTypedView" destination="QLl-HT-O78" id="gM3-QK-XJk"/>
